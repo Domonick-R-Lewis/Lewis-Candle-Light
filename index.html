@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lewis' Candle Lights - Premium Scented Candles</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <header id="headermain">
     <nav class="navigation">
-            <a href="index.html" class="logo"><img src="../AssetsV2/Lewis%20Candle%20Lights.png" alt="Lewis Candle Lights"></a>
+            <a href="index.html" class="logo"><img src="./AssetsV2/Lewis%20Candle%20Lights.png" alt="Lewis Candle Lights"></a>
             <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="hamburger"></span>
             </button>
@@ -34,15 +34,15 @@
         <h2>Our Products</h2>
         <div class="products-grid" id="products-container">
             <div class="product-card">
-                <img src="../AssetsV2/Pumpkin%20Spice.jpg" alt="Pumpkin Spice" style="width:100%;height:auto;border-radius:8px;">
+                <img src="./AssetsV2/Pumpkin%20Spice.jpg" alt="Pumpkin Spice" style="width:100%;height:auto;border-radius:8px;">
                 <h3>Pumpkin Spice</h3>
             </div>
             <div class="product-card">
-                <img src="../AssetsV2/Winter%20Whisper.jpg" alt="Winter Whisper" style="width:100%;height:auto;border-radius:8px;">
+                <img src="./AssetsV2/Winter%20Whisper.jpg" alt="Winter Whisper" style="width:100%;height:auto;border-radius:8px;">
                 <h3>Winter Whisper</h3>
             </div>
             <div class="product-card">
-                <img src="../AssetsV2/Allure%20of%20the%20Sea.jpg" alt="Allure of the Sea" style="width:100%;height:auto;border-radius:8px;">
+                <img src="./AssetsV2/Allure%20of%20the%20Sea.jpg" alt="Allure of the Sea" style="width:100%;height:auto;border-radius:8px;">
                 <h3>Allure of the Sea</h3>
             </div>
         </div>
@@ -58,9 +58,9 @@
         
         
         const products = [
-            { id: 1, name: "Pumpkin Spice", price: 23.99, description: "Pumpkin spice aroma", image: "../AssetsV2/Pumpkin%20Spice.jpg" },
-            { id: 2, name: "Winter Whisper", price: 25.99, description: "Cool winter scent", image: "../AssetsV2/Winter%20Whisper.jpg" },
-            { id: 3, name: "Allure of the Sea", price: 27.99, description: "Oceanic freshness", image: "../AssetsV2/Allure%20of%20the%20Sea.jpg" }
+            { id: 1, name: "Pumpkin Spice", price: 23.99, description: "Pumpkin spice aroma", image: "./AssetsV2/Pumpkin%20Spice.jpg" },
+            { id: 2, name: "Winter Whisper", price: 25.99, description: "Cool winter scent", image: "./AssetsV2/Winter%20Whisper.jpg" },
+            { id: 3, name: "Allure of the Sea", price: 27.99, description: "Oceanic freshness", image: "./AssetsV2/Allure%20of%20the%20Sea.jpg" }
         ];
         
         document.addEventListener('DOMContentLoaded', function() {
@@ -121,4 +121,5 @@
         });
     </script>
 </body>
+
 </html>
