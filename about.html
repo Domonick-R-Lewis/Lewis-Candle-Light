@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lewis' Candle Lights</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header id="headermain">
+    <nav class="navigation">
+            <a href="index.html" class="logo"><img src="../AssetsV2/Lewis%20Candle%20Lights.png" alt="Lewis Candle Lights"></a>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="section">
+        <h2>About Lewis' Candle Lights</h2>
+        
+        <div style="background: white; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+            <h3>Company Information</h3>
+            <p><strong>Mission:</strong> To create handcrafted, eco-friendly candles that bring warmth and tranquility to every space.</p>
+            <p><strong>Vision:</strong> To be the leading provider of sustainable, aromatic home essentials in the Caribbean.</p>
+            <p><strong>Slogan:</strong> "Light Up Your Senses, Naturally."</p>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+            <h3>Contact Us</h3>
+            <p>Have questions or feedback? We'd love to hear from you!</p>
+            <p>Email: <a href="mailto:domonicklewis56@gmail.com">contact@domonicklewis56@gmail.com</a></p>
+            <p>Phone: (876) 555-SCENT</p>
+            <p>Address: 112 Barbican Road, Kingston, Jamaica</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="section">
+            <p>&copy; 2024 Lewis' Candle Lights. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-count').textContent = totalItems;
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const links = document.querySelector('.nav-links');
+            if (toggle && links) {
+                toggle.addEventListener('click', () => {
+                    links.classList.toggle('open');
+                    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+                });
+            }
+        });
+    </script>
+</body>
+</html>
